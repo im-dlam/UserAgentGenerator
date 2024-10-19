@@ -2,10 +2,9 @@
 
 This project aims to create a simple user-agent generator that can be used to mimic different browsers and devices. This can be particularly useful for web scraping and testing purposes.
 
-## Getting Started
+## Getting Started V1.0
 
 ### Prerequisites
-
 Ensure you have the following installed:
 - Python 3.x
 - pip
@@ -15,13 +14,13 @@ Ensure you have the following installed:
 Follow these steps to set up the project:
 
 ```bash
-$ pip install UserAgentGenerator
+$ pip install GenUserAgent
 
 ```
 ### Example
 ```Python
 
-import UserAgentGenerator
+from GenUserAgent import UserAgentGenerator
 
 headers = {
 'User-agent': UserAgentGenerator().generate_user_agent(),
