@@ -35,9 +35,17 @@ headers = {
 ### Logger console
 ```Python
 
-from Gen import *
+from Gen import UserAgentGenerator 
+from Gen.utils import logger
+
+
+user_agent = UserAgentGenerator().generate_user_agent()
+
+from Gen.utils import logger
 import requests
 
 result =  requests.get("https://api.myip.com")
 if result.status_code == 200:
-    logger.info(f"SUCCESS - IP : {result..json()['ip']}")
+    logger.info(f"SUCCESS - IP : {result.json()['ip']}")
+else:
+    logger.warning("Not found result !")
