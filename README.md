@@ -2,7 +2,7 @@
 
 This project aims to create a simple user-agent generator that can be used to mimic different browsers and devices. This can be particularly useful for web scraping and testing purposes.
 
-## Getting Started V1.0
+## Getting Started v1.6
 
 ### Prerequisites
 Ensure you have the following installed:
@@ -17,10 +17,10 @@ Follow these steps to set up the project:
 $ pip install GenUserAgent
 
 ```
-### Example
+### Generate User-Agent Facebook
 ```Python
 
-from GenUserAgent import UserAgentGenerator
+from Gen import UserAgentGenerator
 
 headers = {
 'User-agent': UserAgentGenerator().generate_user_agent(),
@@ -31,3 +31,13 @@ headers = {
 'X-Fb-Friendly-Name': 'FbBloksActionRootQuery-com.bloks.www.bloks.caa.login.async.send_login_request',
 }
 
+```
+### Logger console
+```Python
+
+from Gen import *
+import requests
+
+result =  requests.get("https://api.myip.com")
+if result.status_code == 200:
+    logger.info(f"SUCCESS - IP : {result..json()['ip']}")
