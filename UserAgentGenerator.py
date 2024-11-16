@@ -4,8 +4,6 @@ import logging
 from colorlog import ColoredFormatter
 
 
-
-
 class UserAgentGenerator:
     def __init__(self):
         # Khởi tạo các thuộc tính với dữ liệu cần thiết
